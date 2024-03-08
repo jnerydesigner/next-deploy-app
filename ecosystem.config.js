@@ -5,14 +5,15 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
-      ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
+      user : 'jander.webmaster@gmail.com',
+      host : '191.101.78.119',
+      ref  : 'origin/main',
+      repo : 'git@github.com:jnerydesigner/next-deploy-app.git',
+      path : '/home/root',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      'post-deploy' : 'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js',
+      'pre-setup': '',
+      'ssh_options': 'ForwardAgent=yes',
     }
   }
 };
