@@ -9,7 +9,7 @@ module.exports = {
       host : '191.101.78.119',
       ref  : 'origin/main',
       repo : 'git@github.com:jnerydesigner/next-deploy-app.git',
-      path : '/home/root',
+      path : '/root',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js -env production',
       'pre-setup': '',
