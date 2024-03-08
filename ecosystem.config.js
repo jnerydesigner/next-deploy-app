@@ -11,7 +11,7 @@ module.exports = {
       repo : 'git@github.com:jnerydesigner/next-deploy-app.git',
       path : '/home/root',
       'pre-deploy-local': '',
-      'post-deploy' : 'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js',
+      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js',
       'pre-setup': '',
       'ssh_options': 'ForwardAgent=yes',
     }
