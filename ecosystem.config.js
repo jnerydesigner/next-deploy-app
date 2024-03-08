@@ -5,7 +5,7 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'jander.webmaster@gmail.com',
+      user : 'root',
       host : '191.101.78.119',
       ref  : 'origin/main',
       repo : 'git@github.com:jnerydesigner/next-deploy-app.git',
