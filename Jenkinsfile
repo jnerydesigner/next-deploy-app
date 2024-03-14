@@ -23,7 +23,7 @@ pipeline{
 
         stage("Deploy Prod Restart"){
             steps{
-                sh 'pm2 resstart ecosystem.config.js'
+                sh 'pm2 restart ecosystem.config.js'
             }            
         }
     }
