@@ -4,11 +4,16 @@ pipeline{
         nodejs 'Node'
     }
     stages{
-        stage("Git remote"){
+        stage("Install Dependencies"){
             steps{
                 sh 'npm ci'
-            }
-            
+            }            
+        }
+
+        stage("Build Project"){
+            steps{
+                sh 'npm run build'
+            }            
         }
     }
 }
