@@ -2,9 +2,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="w-[50%] h-[100vh] flex justify-center items-center flex-col bg-slate-400 shadow-sm">
-        <h2>New Deploy in NextJS - By Jander Nery</h2>
+    <div className="m-0 w-[100%] h-[100vh] flex justify-center items-center flex-col bg-slate-400 shadow-sm">
+      <div className="m-0 w-[50%] h-[70vh] flex justify-center items-center flex-col bg-zinc-900 shadow-md rounded p-8">
+        <h2 className="py-8 text-6xl text-center">
+          New Deploy in NextJS - By Jander Nery
+        </h2>
         <p>
           O texto dissertativo – ou dissertação – é um tipo de texto, de
           natureza teórica, que tem o objetivo principal de expor um tema. De
@@ -21,6 +23,6 @@ export default function Home() {
           e vestibulares.
         </p>
       </div>
-    </main>
+    </div>
   );
 }
