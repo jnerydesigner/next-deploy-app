@@ -4,6 +4,12 @@ pipeline{
         nodejs 'Node'
     }
     stages{
+        stage("Verifield Files"){
+            steps{
+                sh 'pwd'
+            }            
+        }
+
         stage("Install Dependencies"){
             steps{
                 sh 'npm ci'
@@ -21,7 +27,7 @@ pipeline{
                 sh 'cp * ~/next-deploy-app/ -r'
             }            
         }
-        
+
         stage("Deploy Prod Start"){
             steps{
                 sh 'pm2 restart ecosystem.config.js'
