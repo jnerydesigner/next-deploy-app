@@ -24,7 +24,7 @@ pipeline{
 
         stage("Copy Files"){
             steps{
-                sh 'cp * ~/next-deploy-app/ -r'
+                sh 'cp /var/lib/jenkins/workspace/NextDeploy/ /root/next-deploy-app/ -r'
             }            
         }
 
