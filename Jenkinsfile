@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Git remote"){
             steps{
-                echo "Baixando Projeto"
+                sh 'npm ci'
             }
             
         }
