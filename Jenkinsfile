@@ -21,10 +21,10 @@ pipeline{
             }            
         }
 
-        stage("Deploy Prod Restart"){
-            steps{
-                sh 'pm2 reload ecosystem.config.js'
-            }            
-        }
+        // stage("Deploy Prod Restart"){
+        //     steps{
+        //         sh 'pm2 reload ecosystem.config.js'
+        //     }            
+        // }
     }
 }
