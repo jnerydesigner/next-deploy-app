@@ -5,7 +5,7 @@ export default function Home() {
     <div className="m-0 w-[100%] h-[100vh] flex justify-center items-center flex-col bg-slate-400 shadow-sm">
       <div className="m-0 w-[50%] h-[70vh] flex justify-center items-center flex-col bg-zinc-900 shadow-md rounded p-8">
         <h2 className="py-8 text-6xl text-center">
-          New Deploy in NextJS - By Jander Nery
+          New Deploy in NextJS - By Jander Nery - Com Novo Deploy
         </h2>
         <p>
           O texto dissertativo – ou dissertação – é um tipo de texto, de
