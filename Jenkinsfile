@@ -4,12 +4,6 @@ pipeline{
         nodejs 'Node'
     }
     stages{
-        stage("Copy Files"){
-            steps{
-                sh 'cp * ~/next-deploy-app/ -r'
-            }            
-        }
-
         stage("Install Dependencies"){
             steps{
                 sh 'npm ci'
@@ -21,6 +15,13 @@ pipeline{
                 sh 'npm run build'
             }            
         }
+
+        stage("Copy Files"){
+            steps{
+                sh 'cp * ~/next-deploy-app/ -r'
+            }            
+        }
+        
         stage("Deploy Prod Start"){
             steps{
                 sh 'pm2 restart ecosystem.config.js'
