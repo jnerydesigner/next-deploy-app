@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        node 'Node'
+        nodejs 'Node'
     }
     stages{
         stage("Git remote"){
