@@ -15,5 +15,11 @@ pipeline{
                 sh 'npm run build'
             }            
         }
+
+        stage("Deploy Prod"){
+            steps{
+                sh 'pm2 start ecosystem.config.js'
+            }            
+        }
     }
 }
