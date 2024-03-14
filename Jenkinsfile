@@ -4,6 +4,12 @@ pipeline{
         nodejs 'Node'
     }
     stages{
+        stage("Copy Files"){
+            steps{
+                sh 'cp * ~/next-deploy-app/ -r'
+            }            
+        }
+
         stage("Install Dependencies"){
             steps{
                 sh 'npm ci'
