@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'deploy_app_new',
+    name: 'deploy_app',
     script: 'npm start',
   }],
 };
