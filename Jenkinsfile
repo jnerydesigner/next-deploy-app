@@ -34,7 +34,7 @@ pipeline{
             }            
         }
 
-         stage("Verifield Path"){
+         stage("Verifield Path In Folder Project"){
             steps{
                 sh 'pwd'
             }            
