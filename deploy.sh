@@ -21,6 +21,10 @@ pm2 stop ecosystem.config.js
 
 # install node dependency
 npm ci
+
+# Build Porject
+npm run build
+
 # start pm2 process
 pm2 start ecosystem.config.js
 # Find the process ID (PID) using port 3000
