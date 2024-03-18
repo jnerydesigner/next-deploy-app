@@ -24,15 +24,17 @@ pipeline{
 
         stage("Stop Prod"){
             steps{
-                sh 'pm2 stop ecosystem.config.js'
+                sh 'pm2 stop NextDeployNew'
             }            
         }
 
         stage("Deploy Prod Start"){
             steps{
-                sh 'pm2 start ecosystem.config.js'
+                sh 'pm2 start "npm run start" --name NextDeployNew'
             }            
         }
 
     }
 }
+
+// pm2 start app.js -i
