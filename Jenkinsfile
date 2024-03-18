@@ -20,7 +20,13 @@ pipeline{
             steps{
                 sh 'npm run build'
             }            
-        }       
+        }  
+
+        stage("Deploy Prod Start Initial"){
+            steps{
+                sh 'pm2 start "npm run start" --name NextDeployNew'
+            }            
+        }     
 
         stage("Stop Prod"){
             steps{
@@ -28,7 +34,7 @@ pipeline{
             }            
         }
 
-        stage("Deploy Prod Start"){
+        stage("Deploy Prod Start Final"){
             steps{
                 sh 'pm2 start "npm run start" --name NextDeployNew'
             }            
